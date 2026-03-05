@@ -20,4 +20,5 @@ IKEA_001 - Verify that user cannot login with empty or invalid credentials
 
 IKEA_002 - Verify user cannot register when required fields are empty
     common.Open website
+    top_bar_page.Go to profile menu
     register_page.Verify user cannot register when required fields are empty

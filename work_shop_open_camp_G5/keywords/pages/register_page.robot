@@ -5,7 +5,7 @@ Library    DebugLibrary
 ***Keywords***
 Verify user cannot register when required fields are empty
 
-    Browser.Click                ${register_locator.btn_header_profile}
+    # Browser.Click                ${register_locator.btn_header_profile}
     Browser.Click                ${register_locator.btn_create_account}
     # Debug
     Browser.Check Checkbox       ${register_locator.chk_policy_checkbox}

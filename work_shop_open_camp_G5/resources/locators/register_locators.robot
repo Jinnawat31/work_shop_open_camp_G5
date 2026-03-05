@@ -1,6 +1,6 @@
 *** Variables ***
 &{register_locator}
-...    btn_header_profile=css=#hnf-header-profile
+# ...    btn_header_profile=css=#hnf-header-profile
 ...    btn_create_account=css=[data-testid="create-account"]
 ...    chk_policy_checkbox=css=[data-testid="privacy-policy-checkbox"]
 ...    lbl_policy_content=css=.pp-skapa__form-field__content span:text-is("Please confirm that you agree to the Privacy Policy to proceed")
