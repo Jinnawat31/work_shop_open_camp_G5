@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2026-03-05T15:47:58.622511" rpa="false" schemaversion="5">
+<suite id="s1" name="TC 001" source="D:\GitHub\work_shop_open_camp_G5\work_shop_open_camp_G5\testcase\TC_001.robot">
+<test id="s1-t1" name="IKEA_002 - Verify user cannot register when required fields are empty" line="6">
+<kw name="Open website" owner="common">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-03-05T15:47:58.909112" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\GitHub\\work_shop_open_camp_G5\\work_shop_open_camp_G5\\testcase\\browser\\traces\\temp\\2d6eb7a1-ec29-4e2a-94c3-f482f1e0a20f"}</msg>
+<msg time="2026-03-05T15:47:58.930941" level="INFO">Starting Browser process C:\Users\innop\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:54039</msg>
+<msg time="2026-03-05T15:47:59.667568" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\GitHub\\work_shop_open_camp_G5\\work_shop_open_camp_G5\\testcase\\browser\\traces\\temp\\2d6eb7a1-ec29-4e2a-94c3-f482f1e0a20f"}</msg>
+<arg>chromium</arg>
+<arg>${false}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-03-05T15:47:58.908509" elapsed="0.759322"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2026-03-05T15:47:59.670239" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2026-03-05T15:47:59.694492" level="INFO">Successfully created context. </msg>
+<msg time="2026-03-05T15:47:59.694609" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2026-03-05T15:47:59.668192" elapsed="0.026538"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-03-05T15:48:01.293517" level="INFO">Successfully initialized new page object and opened url: https://www.ikea.com/th</msg>
+<arg>https://www.ikea.com/th</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-03-05T15:47:59.695030" elapsed="1.598739"/>
+</kw>
+<status status="PASS" start="2026-03-05T15:47:58.908017" elapsed="2.385933"/>
+</kw>
+<kw name="Verify user cannot register when required fields are empty" owner="register_page">
+<kw name="Click" owner="Browser">
+<msg time="2026-03-05T15:48:01.295628" level="INFO">Clicks the element 'css=#hnf-header-profile'.</msg>
+<arg>${register_locator.btn_header_profile}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-03-05T15:48:01.294983" elapsed="0.173216"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-03-05T15:48:01.469752" level="INFO">Clicks the element 'css=[data-testid="create-account"]'.</msg>
+<arg>${register_locator.btn_create_account}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-03-05T15:48:01.468483" elapsed="0.970300"/>
+</kw>
+<kw name="Check Checkbox" owner="Browser">
+<arg>${register_locator.chk_policy_checkbox}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Checks the checkbox or selects radio button found by ``selector``.</doc>
+<status status="PASS" start="2026-03-05T15:48:02.438971" elapsed="1.892268"/>
+</kw>
+<kw name="Uncheck Checkbox" owner="Browser">
+<arg>${register_locator.chk_policy_checkbox}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Unchecks the checkbox found by ``selector``.</doc>
+<status status="PASS" start="2026-03-05T15:48:04.331422" elapsed="0.047703"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-03-05T15:48:04.387299" level="INFO">Waited for Element with selector css=.pp-skapa__form-field__content span:text-is("Please confirm that you agree to the Privacy Policy to proceed") at state visible</msg>
+<arg>${register_locator.lbl_policy_content}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-03-05T15:48:04.379299" elapsed="0.008160"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-03-05T15:48:04.388532" level="INFO">Clicks the element 'css=[data-testid="sign-up-create-account"]'.</msg>
+<arg>${register_locator.btn_signup_create}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-03-05T15:48:04.387637" elapsed="0.044111"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-03-05T15:48:04.438591" level="INFO">Waited for Element with selector css=.pp-skapa__form-field__content span:text-is("The first name field cannot be left empty") at state visible</msg>
+<arg>${register_locator.lbl_content_first_name}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-03-05T15:48:04.431961" elapsed="0.006783"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-03-05T15:48:04.444785" level="INFO">Waited for Element with selector css=.pp-skapa__form-field__content span:text-is("The last name field cannot be left empty") at state visible</msg>
+<arg>${register_locator.lbl_content_last_name}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-03-05T15:48:04.438947" elapsed="0.005974"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-03-05T15:48:04.451572" level="INFO">Waited for Element with selector css=.pp-skapa__form-field__content span:text-is("The email address field cannot be left empty") at state visible</msg>
+<arg>${register_locator.lbl_content_email}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-03-05T15:48:04.445091" elapsed="0.006638"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-03-05T15:48:04.457953" level="INFO">Waited for Element with selector css=.pp-skapa__form-field__content span:text-is("The password field cannot be left empty") at state visible</msg>
+<arg>${register_locator.lbl_content_password}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-03-05T15:48:04.451929" elapsed="0.006160"/>
+</kw>
+<status status="PASS" start="2026-03-05T15:48:01.294478" elapsed="3.163715"/>
+</kw>
+<msg time="2026-03-05T15:48:04.468797" level="INFO">Switching context to context=da93e990-26bb-4c0d-8c20-53028f7d26c9 in CURRENT</msg>
+<msg time="2026-03-05T15:48:04.475762" level="INFO">Successfully changed active context: context=da93e990-26bb-4c0d-8c20-53028f7d26c9</msg>
+<msg time="2026-03-05T15:48:04.495109" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2026-03-05T15:47:58.907378" elapsed="5.551106"/>
+</test>
+<status status="PASS" start="2026-03-05T15:47:58.623582" elapsed="5.872770"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TC 001" id="s1" pass="1" fail="0" skip="0">TC 001</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

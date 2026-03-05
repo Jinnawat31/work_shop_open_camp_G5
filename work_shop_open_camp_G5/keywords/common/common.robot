@@ -1,6 +1,5 @@
 *** Settings ***
-Library   Browser
-
+Library     Browser
 ***Keywords***
 Open website
     Browser.New browser  chromium  ${false}

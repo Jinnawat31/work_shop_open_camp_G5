@@ -1,6 +1,5 @@
 *** Settings ***
-Resource  ${CURDIR}/../resources/import.robot
-Library   DebugLibrary
+Resource    ${CURDIR}/../resources/import.robot
 
 ***Test Cases ***
 IKEA_001 - Verify that user cannot login with empty or invalid credentials
@@ -18,3 +17,7 @@ IKEA_001 - Verify that user cannot login with empty or invalid credentials
     # Verify message "อีเมลหรือรหัสผ่านที่คุณกรอกไม่ถูกต้อง หรือไม่พบบัญชีดังกล่าวใน IKEA ประเทศไทย" is displayed
     login_features.Login with account does not exist     ${IKEA_001.email}   ${IKEA_001.password}
     login_page.Verify error message for account does not exist 
+
+IKEA_002 - Verify user cannot register when required fields are empty
+    common.Open website
+    register_page.Verify user cannot register when required fields are empty
